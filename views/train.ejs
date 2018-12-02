@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Train Ticket Booking</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <H1 style="text-align:center">Train Ticket Booking</H1>
+      <form method="POST">
+      <table>
+          <tr>
+          <th>Train No</th>
+          <th>Trains</th>
+          <th>Total Seats</th>
+          <th>Availabe Seats</th>
+          <th>Fare</th>
+          <th>Book</th>
+        </tr>
+        <% for (train of trains){ %>
+            <tr>
+            <td><%=train.number %></td>
+            <td><%=train.name %></td>
+            <td><%=train.TotalSeats %></td>
+            <td><%=train.AvailableSeats %></td>
+            <td><%=train.fare %></td>
+            <td><input type="submit" name=<%=train.name %> value="Book!"></td>
+        </tr>
+        <% } %>
+          <!-- <tr><td>Chennai Express</td>
+            <td>Chennai Express</td>
+            <td>Chennai Express</td>
+            <td>Chennai Express</td>
+        </tr> -->
+
+      </table>
+    </form>
+  </body>
+</html>
