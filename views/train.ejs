@@ -4,7 +4,7 @@
     <title>Train Ticket Booking</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
+  <body style="background-image:url(https://images.wallpaperscraft.com/image/railway_train_mountains_winter_118617_1920x1080.jpg)">
       <H1 style="text-align:center">Train Ticket Booking</H1>
       <form method="POST">
       <table>
@@ -23,14 +23,9 @@
             <td><%=train.TotalSeats %></td>
             <td><%=train.AvailableSeats %></td>
             <td><%=train.fare %></td>
-            <td><input type="submit" name=<%=train.name %> value="Book!"></td>
+            <td><input type="submit" name=<%=train.name %> value="Book"></td>
         </tr>
         <% } %>
-          <!-- <tr><td>Chennai Express</td>
-            <td>Chennai Express</td>
-            <td>Chennai Express</td>
-            <td>Chennai Express</td>
-        </tr> -->
 
       </table>
     </form>

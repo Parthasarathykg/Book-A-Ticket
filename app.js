@@ -6,11 +6,11 @@ var logger = require('morgan');
 
 var router = express.Router();
 var trains=[
-  {number:'16316',name:'BANGALORE EXP',TotalSeats:120,AvailableSeats:120,fare:'₹585.00'},
-  {number:'16319',name:'BAND HUMSAFAR',TotalSeats:180,AvailableSeats:180,fare:'₹770.00'},
-  {number:'11014',name:'LOKMANYA TT EXP',TotalSeats:140,AvailableSeats:140,fare:'₹640.00'},
-  {number:'22666',name:'CBE SBC UDAY EXP',TotalSeats:210,AvailableSeats:210,fare:'₹610.00'},
-  {number:'22678',name:'KCVL YPR AC EXP',TotalSeats:120,AvailableSeats:120,fare:'₹745.00'}
+  {number:'16316',name:'BANGALORE-EXP',TotalSeats:120,AvailableSeats:120,fare:'₹585.00'},
+  {number:'16319',name:'BAND-HUMSAFAR',TotalSeats:180,AvailableSeats:180,fare:'₹770.00'},
+  {number:'11014',name:'LOKMANYA-TT-EXP',TotalSeats:140,AvailableSeats:140,fare:'₹640.00'},
+  {number:'22666',name:'CBE-SBC-UDAY-EXP',TotalSeats:210,AvailableSeats:210,fare:'₹610.00'},
+  {number:'22678',name:'KCVL-YPR-AC-EXP',TotalSeats:120,AvailableSeats:120,fare:'₹745.00'}
 
 ]
 
@@ -24,11 +24,12 @@ router.get('/train',function(req,res,next){
 router.post('/train',function(req,res,next){
   console.log(Object.keys(req.body)[0]);
   check=Object.keys(req.body)[0];
+  console.log(trains[0].name);
   for (train in trains)
   {
     if (trains[train].name==check)
     {
-      console.log(trains[train].name);
+      //console.log(trains[train].name);
       trains[train].AvailableSeats-=1;
     }
   }
